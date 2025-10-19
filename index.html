@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parkour 2D</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="ui">
+    <div class="panel" id="menuPanel">
+      <h1>🏙️ Parkour 2D</h1>
+      <div class="row">
+        <button id="btnPlay">Jogar</button>
+        <button id="btnNew">Criar novo mundo</button>
+      </div>
+      <div class="row">
+        <label>Nível
+          <select id="levelSelect"></select>
+        </label>
+      </div>
+      <p class="small">Controles: setas/esquerda-direita + pular (Espaço) — ou ative "Toque" para botões na tela.</p>
+    </div>
+
+    <div class="panel small" id="panelRight">
+      <div><strong>Personagem</strong></div>
+      <div class="skins" id="skinList"></div>
+      <div class="row small">Pontos: <b id="pts">0</b> &nbsp; Moedas: <b id="coins">0.00</b></div>
+      <div class="row">
+        <button id="btnStore">Loja</button>
+        <button id="btnConvert">P = M</button>
+      </div>
+      <div class="row">
+        <label>Toque <input type="checkbox" id="touchToggle"></label>
+      </div>
+      <div class="row">
+        <label>Volume <input id="vol" type="range" min="0" max="1" step="0.01" value="0.6"></label>
+      </div>
+    </div>
+  </div>
+
+  <canvas id="gameCanvas" width="900" height="480"></canvas>
+
+  <audio id="sJump" src="assets/sounds/jump.wav"></audio>
+  <audio id="sDeath" src="assets/sounds/death.wav"></audio>
+  <audio id="sCheckpoint" src="assets/sounds/checkpoint.wav"></audio>
+  <audio id="sCoin" src="assets/sounds/coin.wav"></audio>
+  <audio id="bgm" src="assets/sounds/bgm.mp3" loop autoplay></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

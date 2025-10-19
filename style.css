@@ -1,0 +1,14 @@
+:root{--bg:#071428;--panel:#111827;--accent:#3b82f6}
+html,body{height:100%;margin:0;font-family:Inter,Arial,Helvetica,sans-serif;background:linear-gradient(180deg,#071428 0%, #0b1020 100%);color:#e6eef8}
+#ui{position:fixed;right:12px;top:12px;width:320px;max-width:calc(100% - 24px);z-index:50}
+.panel{background:rgba(0,0,0,0.45);backdrop-filter:blur(6px);border-radius:10px;padding:10px;margin-bottom:10px}
+canvas{display:block;margin:0 auto;background:linear-gradient(180deg,#9fb6ff 0%,#6ea7ff 60%,transparent 60%)}
+.row{display:flex;gap:8px;align-items:center}
+button{cursor:pointer;border:0;padding:8px 10px;border-radius:8px;background:var(--accent);color:white}
+select,input[type=range]{width:100%}
+.small{font-size:13px;opacity:0.95}
+.skins{display:flex;gap:8px;overflow:auto;padding-top:8px}
+.skin{width:56px;height:56px;flex:0 0 56px;border-radius:8px;overflow:hidden;border:2px solid transparent;display:flex;align-items:center;justify-content:center;font-weight:bold;color:white;font-size:14px}
+.skin.sel{border-color:#ffd700}
+#gameCanvas{display:block;width:100%;height:calc(100vh);position:fixed;left:0;top:0;z-index:1}
+#ui{z-index:3}
